@@ -1,4 +1,10 @@
 #################
+## Project specific
+#################
+
+LevenbergMarquardt/Cpp/extlibs/
+
+#################
 ## Matlab
 #################
 *.asv

@@ -11,14 +11,14 @@ function [ P, e, k ] = LevenbergMarquardt( yobs, x, numCoeffs )
     
     J = Jacobian( P, x );
     Jt = J';
-    k = 0;
-    nu = 2;
     A =  Jt * J;
     Id = eye( size(A,1) );
     
     e = yobs - ApplyPolynom( P, x );
     g = Jt * e;
     
+    k = 0;
+    nu = 2;
     stop = max(abs(g)) < e1;
     mu = Mu( A, tau );
     
@@ -78,11 +78,13 @@ function [ mu ] = Mu( A, tau )
     mu = 0;
     for i=1:N
         
-        mut = tau * A(i,i);
+        mut = A(i,i);
         
         if( mut > mu )
             mu = mut;
         end
     end
+    
+    mu = mu * tau;
 end
 

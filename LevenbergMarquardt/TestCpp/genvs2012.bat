@@ -1,0 +1,1 @@
+cmake -G"Visual Studio 11" -DUSE_SHARED_LIBS:BOOL=ON

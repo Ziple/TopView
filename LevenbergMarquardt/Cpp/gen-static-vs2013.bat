@@ -1,0 +1,1 @@
+cmake -DBUILD_SHARED_LIBS:BOOL=OFF -G"Visual Studio 12"
