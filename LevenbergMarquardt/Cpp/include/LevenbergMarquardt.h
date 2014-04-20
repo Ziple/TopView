@@ -23,6 +23,19 @@ extern "C" {
 		lmu32 numCoeffs,
 		lmf32* e );
 
+	/**
+	* \brief Finds a polynom of specified degree near the points
+	* \return Return an error code: see the error codes.
+	*/
+	lmu32 LM_API direct_resolution(
+		lmf32* yobs,
+		lmu32 yobsLength,
+		lmf32* xobs,
+		lmu32 xobsLength,
+		lmf32* polyptr,
+		lmu32 numCoeffs,
+		lmf32* e);
+
 }
 
 #endif /* __LM_HPP__ */

@@ -19,6 +19,19 @@ void Jacobian(MatrixXf& J, const VectorXf& poly, const VectorXf& xobs)
 
 }
 
+void Jacobian(MatrixXd& J, const VectorXd& poly, const VectorXd& xobs)
+{
+	lmu32 N = xobs.rows();
+	lmu32 D = poly.rows();
+
+	J.resize(N, D);
+
+	for (size_t i = 0; i < N; i++)
+		for (size_t k = 0; k < D; k++)
+			J(i, k) = static_cast<lmf64>(std::pow(xobs(i), k));
+
+}
+
 VectorXf Horner(const VectorXf& poly, const VectorXf& xobs)
 {
 	size_t xobsLength = xobs.rows();
@@ -29,6 +42,21 @@ VectorXf Horner(const VectorXf& poly, const VectorXf& xobs)
 	auto xarr = xobs.array();
 
 	for (ptrdiff_t i = numCoeffs-1; i >= 0; i--)
+		yarr = (yarr * xarr) + poly(i);
+
+	return yarr.matrix();
+}
+
+VectorXd Horner(const VectorXd& poly, const VectorXd& xobs)
+{
+	size_t xobsLength = xobs.rows();
+	size_t numCoeffs = poly.rows();
+
+	VectorXd y = VectorXd::Zero(xobsLength);
+	auto yarr = y.array();
+	auto xarr = xobs.array();
+
+	for (ptrdiff_t i = numCoeffs - 1; i >= 0; i--)
 		yarr = (yarr * xarr) + poly(i);
 
 	return yarr.matrix();
@@ -141,6 +169,55 @@ lmu32 LM_API levenberg_marquardt(
 		polyptr[i] = P(i);
 
 	*e = E.squaredNorm();
+
+	return LM_SUCCESS;
+}
+
+lmu32 LM_API direct_resolution(
+	lmf32* yobs,
+	lmu32 yobsLength,
+	lmf32* xobs,
+	lmu32 xobsLength,
+	lmf32* polyptr,
+	lmu32 numCoeffs,
+	lmf32* e)
+{
+	lmf32 e1 = 10e-15f;
+	lmf32 e2 = 10e-15f;
+	lmf32 e3 = 10e-15f;
+	lmf32 tau = 10e-3f;
+	lmu32 kmax = 100;
+
+	if (yobsLength != xobsLength)
+		return LM_ARRAY_SIZES_DIFFERENT;
+
+	// initialisation
+	VectorXd P = VectorXd::Zero(numCoeffs);
+
+	VectorXd Xobs(xobsLength);
+	for (size_t i = 0; i < xobsLength; i++)
+		Xobs(i) = static_cast<lmf64>( xobs[i] );
+
+	VectorXd Yobs(yobsLength);
+	for (size_t i = 0; i < yobsLength; i++)
+		Yobs(i) = static_cast<lmf64>( yobs[i] );
+
+	MatrixXd J;
+	Jacobian(J, P, Xobs);
+
+	MatrixXd Jt = J.transpose();
+	MatrixXd A = Jt * J;
+
+	// computations
+	P = A.inverse() * (Jt * Yobs);
+
+	// copy back results
+	for (size_t i = 0; i < numCoeffs; i++)
+		polyptr[i] = static_cast<lmf32>( P(i) );
+
+	VectorXd E(yobsLength);
+	E = Yobs - Horner(P, Xobs);
+	*e = static_cast<lmf32>( E.squaredNorm() );
 
 	return LM_SUCCESS;
 }

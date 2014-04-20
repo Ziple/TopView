@@ -10,6 +10,9 @@ int main(int argc, char** argv)
 	lmf32 pg[4];
 	lmf32 e = 0.f;
 
+	lmf32 pgd[4];
+	lmf32 ed = 0.f;
+
 	lmu32 numSamples = 100;
 	lmf32 *xobs = new lmf32[numSamples];
 	lmf32 *yobs = new lmf32[numSamples];
@@ -25,7 +28,12 @@ int main(int argc, char** argv)
 
 	levenberg_marquardt(yobs, numSamples, xobs, numSamples, pg, numCoeffs, &e);
 
-	std::cout << "Guessed polynom: " << pg[3] << "*x^3 + " << pg[2] << "*x^2 + " << pg[1] << "*x + " << pg[0] << std::endl;
+	std::cout << "Guessed polynom (LM): " << pg[3] << "*x^3 + " << pg[2] << "*x^2 + " << pg[1] << "*x + " << pg[0] << std::endl;
+
+	direct_resolution(yobs, numSamples, xobs, numSamples, pgd, numCoeffs, &ed);
+
+	std::cout << "Guessed polynom (D): " << pgd[3] << "*x^3 + " << pgd[2] << "*x^2 + " << pgd[1] << "*x + " << pgd[0] << std::endl;
+
 	delete[] yobs;
 	delete[] xobs;
 
