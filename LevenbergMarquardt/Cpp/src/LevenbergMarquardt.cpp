@@ -78,71 +78,73 @@ lmf32 Mu(const MatrixXf& A, lmf32 tau)
 	return mu * tau;
 }
 
-lmu32 LM_API levenberg_marquardt(
-	lmf32* yobs,
-	lmu32 yobsLength,
-	lmf32* xobs,
-	lmu32 xobsLength,
-	lmf32* polyptr,
-	lmu32 numCoeffs,
-	lmf32* e)
+extern "C"
 {
-	lmf32 e1 = 10e-15f;
-	lmf32 e2 = 10e-15f;
-	lmf32 e3 = 10e-15f;
-	lmf32 tau = 10e-3f;
-	lmu32 kmax = 100;
-
-	if (yobsLength != xobsLength)
-		return LM_ARRAY_SIZES_DIFFERENT;
-
-	// initialisation
-	VectorXf P = VectorXf::Zero(numCoeffs);
-
-	VectorXf Xobs(xobsLength);
-	for (size_t i = 0; i < xobsLength; i++)
-		Xobs(i) = xobs[i];
-
-	VectorXf Yobs(yobsLength);
-	for (size_t i = 0; i < yobsLength; i++)
-		Yobs(i) = yobs[i];
-
-	MatrixXf J;
-	Jacobian(J, P, Xobs);
-
-	MatrixXf Jt = J.transpose();
-	MatrixXf A = Jt * J;
-	MatrixXf Id = MatrixXf::Identity( A.rows(), A.cols() );
-
-	// computations
-	VectorXf E(yobsLength);
-	E = Yobs - Horner(P, Xobs);
-
-	VectorXf G = Jt * E;
-
-	lmu32 k = 0;
-	lmf32 nu = 2.f;
-	lmf32 mu = Mu(A, tau);
-
-	bool stop = G.cwiseAbs().maxCoeff() < e1;
-
-	while ((stop != true) && (k < kmax))
+	lmu32 LM_API levenberg_marquardt(
+		lmf32* yobs,
+		lmu32 yobsLength,
+		lmf32* xobs,
+		lmu32 xobsLength,
+		lmf32* polyptr,
+		lmu32 numCoeffs,
+		lmf32* e)
 	{
-		k++;
-		lmf32 rho = 1;
+		lmf32 e1 = 10e-15f;
+		lmf32 e2 = 10e-15f;
+		lmf32 e3 = 10e-15f;
+		lmf32 tau = 10e-3f;
+		lmu32 kmax = 100;
 
-		do
+		if (yobsLength != xobsLength)
+			return LM_ARRAY_SIZES_DIFFERENT;
+
+		// initialisation
+		VectorXf P = VectorXf::Zero(numCoeffs);
+
+		VectorXf Xobs(xobsLength);
+		for (size_t i = 0; i < xobsLength; i++)
+			Xobs(i) = xobs[i];
+
+		VectorXf Yobs(yobsLength);
+		for (size_t i = 0; i < yobsLength; i++)
+			Yobs(i) = yobs[i];
+
+		MatrixXf J;
+		Jacobian(J, P, Xobs);
+
+		MatrixXf Jt = J.transpose();
+		MatrixXf A = Jt * J;
+		MatrixXf Id = MatrixXf::Identity(A.rows(), A.cols());
+
+		// computations
+		VectorXf E(yobsLength);
+		E = Yobs - Horner(P, Xobs);
+
+		VectorXf G = Jt * E;
+
+		lmu32 k = 0;
+		lmf32 nu = 2.f;
+		lmf32 mu = Mu(A, tau);
+
+		bool stop = G.cwiseAbs().maxCoeff() < e1;
+
+		while ((stop != true) && (k < kmax))
 		{
-			VectorXf dp = (A + mu * Id).inverse() * G;
+			k++;
+			lmf32 rho = 1;
 
-			if (dp.dot(dp) < e2*e2*P.dot(P))
-				stop = true;
-			else
+			do
 			{
-				VectorXf Pnew = P + dp;
-				VectorXf Enew = Yobs - Horner(Pnew, Xobs);
+				VectorXf dp = (A + mu * Id).inverse() * G;
 
-				rho = (E.dot(E) - Enew.dot(Enew)) / (dp.dot(mu * dp + G) );
+				if (dp.dot(dp) < e2*e2*P.dot(P))
+					stop = true;
+				else
+				{
+					VectorXf Pnew = P + dp;
+					VectorXf Enew = Yobs - Horner(Pnew, Xobs);
+
+					rho = (E.dot(E) - Enew.dot(Enew)) / (dp.dot(mu * dp + G));
 
 					if (rho > 0)
 					{
@@ -160,64 +162,65 @@ lmu32 LM_API levenberg_marquardt(
 						mu = mu * nu;
 						nu = nu * 2;
 					}
-			}
-		} while ((rho <= 0) && (stop == false));
+				}
+			} while ((rho <= 0) && (stop == false));
+		}
+
+		// copy back results
+		for (size_t i = 0; i < numCoeffs; i++)
+			polyptr[i] = P(i);
+
+		*e = E.squaredNorm();
+
+		return LM_SUCCESS;
 	}
 
-	// copy back results
-	for (size_t i = 0; i < numCoeffs; i++)
-		polyptr[i] = P(i);
+	lmu32 LM_API direct_resolution(
+		lmf32* yobs,
+		lmu32 yobsLength,
+		lmf32* xobs,
+		lmu32 xobsLength,
+		lmf32* polyptr,
+		lmu32 numCoeffs,
+		lmf32* e)
+	{
+		lmf32 e1 = 10e-15f;
+		lmf32 e2 = 10e-15f;
+		lmf32 e3 = 10e-15f;
+		lmf32 tau = 10e-3f;
+		lmu32 kmax = 100;
 
-	*e = E.squaredNorm();
+		if (yobsLength != xobsLength)
+			return LM_ARRAY_SIZES_DIFFERENT;
 
-	return LM_SUCCESS;
-}
+		// initialisation
+		VectorXd P = VectorXd::Zero(numCoeffs);
 
-lmu32 LM_API direct_resolution(
-	lmf32* yobs,
-	lmu32 yobsLength,
-	lmf32* xobs,
-	lmu32 xobsLength,
-	lmf32* polyptr,
-	lmu32 numCoeffs,
-	lmf32* e)
-{
-	lmf32 e1 = 10e-15f;
-	lmf32 e2 = 10e-15f;
-	lmf32 e3 = 10e-15f;
-	lmf32 tau = 10e-3f;
-	lmu32 kmax = 100;
+		VectorXd Xobs(xobsLength);
+		for (size_t i = 0; i < xobsLength; i++)
+			Xobs(i) = static_cast<lmf64>(xobs[i]);
 
-	if (yobsLength != xobsLength)
-		return LM_ARRAY_SIZES_DIFFERENT;
+		VectorXd Yobs(yobsLength);
+		for (size_t i = 0; i < yobsLength; i++)
+			Yobs(i) = static_cast<lmf64>(yobs[i]);
 
-	// initialisation
-	VectorXd P = VectorXd::Zero(numCoeffs);
+		MatrixXd J;
+		Jacobian(J, P, Xobs);
 
-	VectorXd Xobs(xobsLength);
-	for (size_t i = 0; i < xobsLength; i++)
-		Xobs(i) = static_cast<lmf64>( xobs[i] );
+		MatrixXd Jt = J.transpose();
+		MatrixXd A = Jt * J;
 
-	VectorXd Yobs(yobsLength);
-	for (size_t i = 0; i < yobsLength; i++)
-		Yobs(i) = static_cast<lmf64>( yobs[i] );
+		// computations
+		P = A.inverse() * (Jt * Yobs);
 
-	MatrixXd J;
-	Jacobian(J, P, Xobs);
+		// copy back results
+		for (size_t i = 0; i < numCoeffs; i++)
+			polyptr[i] = static_cast<lmf32>(P(i));
 
-	MatrixXd Jt = J.transpose();
-	MatrixXd A = Jt * J;
+		VectorXd E(yobsLength);
+		E = Yobs - Horner(P, Xobs);
+		*e = static_cast<lmf32>(E.squaredNorm());
 
-	// computations
-	P = A.inverse() * (Jt * Yobs);
-
-	// copy back results
-	for (size_t i = 0; i < numCoeffs; i++)
-		polyptr[i] = static_cast<lmf32>( P(i) );
-
-	VectorXd E(yobsLength);
-	E = Yobs - Horner(P, Xobs);
-	*e = static_cast<lmf32>( E.squaredNorm() );
-
-	return LM_SUCCESS;
+		return LM_SUCCESS;
+	}
 }
