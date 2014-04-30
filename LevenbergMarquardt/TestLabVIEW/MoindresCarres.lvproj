@@ -10,9 +10,13 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="CalculerPolynome.vi" Type="VI" URL="../CalculerPolynome.vi"/>
 		<Item Name="MoindresCarres.vi" Type="VI" URL="../MoindresCarres.vi"/>
 		<Item Name="ReRemplissageGraphique.vi" Type="VI" URL="../ReRemplissageGraphique.vi"/>
-		<Item Name="Dependencies" Type="Dependencies"/>
+		<Item Name="Dependencies" Type="Dependencies">
+			<Item Name="Horner.vi" Type="VI" URL="../Horner.vi"/>
+			<Item Name="Interpolate.vi" Type="VI" URL="../Interpolate.vi"/>
+		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
 </Project>
