@@ -15,6 +15,7 @@
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="instr.lib" Type="Folder">
+				<Item Name="K_S30_VISA CalculateCRC16.vi" Type="VI" URL="/&lt;instrlib&gt;/K_S30c_VISA/utility/K_S30_VISA CalculateCRC16.vi"/>
 				<Item Name="K_S30_VISA Global.vi" Type="VI" URL="/&lt;instrlib&gt;/K_S30c_VISA/utility/K_S30_VISA Global.vi"/>
 				<Item Name="K_S30c Terminal.vi" Type="VI" URL="/&lt;instrlib&gt;/K_S30c_VISA/utility/K_S30c Terminal.vi"/>
 			</Item>
