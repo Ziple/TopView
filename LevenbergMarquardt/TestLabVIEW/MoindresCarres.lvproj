@@ -11,6 +11,10 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="CalculerPolynome.vi" Type="VI" URL="../CalculerPolynome.vi"/>
+		<Item Name="Correlation.vi" Type="VI" URL="../Correlation.vi"/>
+		<Item Name="Dot.vi" Type="VI" URL="../Dot.vi"/>
+		<Item Name="ElementWiseMinus.vi" Type="VI" URL="../ElementWiseMinus.vi"/>
+		<Item Name="Mean.vi" Type="VI" URL="../Mean.vi"/>
 		<Item Name="MoindresCarres.vi" Type="VI" URL="../MoindresCarres.vi"/>
 		<Item Name="ReRemplissageGraphique.vi" Type="VI" URL="../ReRemplissageGraphique.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">

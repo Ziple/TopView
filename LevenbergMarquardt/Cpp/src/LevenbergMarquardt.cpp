@@ -57,15 +57,15 @@ extern "C"
 		lmu32 yobsLength,
 		lmf64* xobs,
 		lmu32 xobsLength,
+		lmf64 e3,
 		lmf64* polyptr,
 		lmu32 numCoeffs,
 		lmf64* e)
 	{
 		lmf64 e1 = 10e-15f;
 		lmf64 e2 = 10e-15f;
-		lmf64 e3 = 10e-15f;
 		lmf64 tau = 10e-3f;
-		lmu32 kmax = 1000;
+		lmu32 kmax = 5000;
 
 		if (yobsLength != xobsLength)
 			return LM_ARRAY_SIZES_DIFFERENT;

@@ -19,6 +19,7 @@ extern "C" {
 		lmu32 yobsLength,
 		lmf64* xobs,
 		lmu32 xobsLength,
+		lmf64 e3,
 		lmf64* polyptr,
 		lmu32 numCoeffs,
 		lmf64* e );
