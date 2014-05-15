@@ -75,3 +75,16 @@
 74;Sleeve;Chemise
 75;Volume;Volume
 76;Measure;Mesure
+77;;
+78;;
+79;;
+80;Idle.;Repos.
+81;Calibration: idle.;Calibration: repos.
+82;Measure in progress. Do not open the container.;Mesure en cours. N'ouvrez pas le conteneur.
+83;Purge in progress. Please wait for the end to open the container.;Purge en cours. Veuillez attendre la fin avant d'ouvrir le conteneur.
+84;Calibration: measure in progress, do not open the container.;Calibration: mesure en cours, n'ouvrez pas le conteneur.
+85;;
+86;;
+87;;
+88;;
+89;;
