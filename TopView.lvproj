@@ -17,9 +17,6 @@
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Cell Properties.ctl" Type="VI" URL="/&lt;userlib&gt;/Exaprom PDF/Controls/Cell Properties.ctl"/>
 				<Item Name="Data.ctl" Type="VI" URL="/&lt;userlib&gt;/Exaprom PDF/Controls/PDF Table Xcontrol/Data.ctl"/>
-				<Item Name="PDF Report.xctl" Type="XControl" URL="/&lt;userlib&gt;/Exaprom PDF/Controls/PDF Report Xcontrol/PDF Report.xctl"/>
-				<Item Name="PDF Report.xctl" Type="XControl" URL="/&lt;userlib&gt;/Exaprom PDF/Controls/Xcontrol/PDF Report.xctl"/>
-				<Item Name="PDF Table XControl.xctl" Type="XControl" URL="/&lt;userlib&gt;/Exaprom PDF/Controls/PDF Table Xcontrol/PDF Table XControl.xctl"/>
 				<Item Name="State.ctl" Type="VI" URL="/&lt;userlib&gt;/Exaprom PDF/Controls/PDF Table Xcontrol/State.ctl"/>
 				<Item Name="State.ctl" Type="VI" URL="/&lt;userlib&gt;/Exaprom PDF/Controls/Xcontrol/State.ctl"/>
 				<Item Name="Watermark Page Position.ctl" Type="VI" URL="/&lt;userlib&gt;/Exaprom PDF/Controls/Watermark Page Position.ctl"/>
