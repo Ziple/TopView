@@ -111,6 +111,47 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 		</Item>
-		<Item Name="Build Specifications" Type="Build"/>
+		<Item Name="Build Specifications" Type="Build">
+			<Item Name="Top Porosimeter" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{B3F37947-CDCF-4DBF-A650-A9463C42CF71}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{AD18FD20-128E-4974-B661-2DB67D18C7C3}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_winsec.description" Type="Str">http://www.J2S.com</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{87BC876C-45F4-4A42-A928-1E4FDB55C528}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Top Porosimeter</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/Top Porosimeter</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{A846A491-9D46-4415-A23F-8C3F17046BE1}</Property>
+				<Property Name="Bld_version.build" Type="Int">5</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">TopPorosimeter.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Top Porosimeter/TopPorosimeter.exe</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Top Porosimeter/data</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{615BD39B-3E81-4563-B07D-959DB9016A81}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/TopView/Interface/Interface.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="TgtF_companyName" Type="Str">J2S</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Top Porosimeter</Property>
+				<Property Name="TgtF_internalName" Type="Str">Top Porosimeter</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2014 J2S</Property>
+				<Property Name="TgtF_productName" Type="Str">Top Porosimeter</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{0844F17D-655C-464A-A67C-3B04AC186061}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">TopPorosimeter.exe</Property>
+			</Item>
+		</Item>
 	</Item>
 </Project>
