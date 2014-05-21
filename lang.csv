@@ -2,17 +2,17 @@
 1;Number;Numéro
 2;Sample ID;ID de l'échantillon
 3;Depth;Profondeur (coudées)
-4;Dry mass (g);Poids à sec (g)
+4;Dry weight (g);Poids à sec (g)
 5;Grain volume (cm3);Volume de grain (cm3)
 6;Grain density (g/cm3);Densité de grain (g/cm3)
 7;Pore volume (cm3);Volume de pore (cm3)
 8;Porosity (%);Porosité (%)
-9;Shell volume (cm3);Volume de l'enveloppe (cm3)
+9;Sleeve volume (cm3);Volume de l'enveloppe (cm3)
 10;Length (cm);Longueur (cm)
 11;Diameter (cm);Diamètre (cm)
-12;Shell thickness (cm);Epaisseur de l'enveloppe (cm)
+12;Thickness (cm);Epaisseur (cm)
 13;Temperature (°C);Température (°C)
-14;;
+14;Comments;Commentaires
 15;;
 16;;
 17;;
@@ -69,13 +69,13 @@
 68;Lack of power;Défaut de puissance
 69;Overpressure;Surpression
 70;Loss of pressure signal;Perte du signal de pression
-71;Current pressure;Pression courante :
+71;Current pressure;Pression courante
 72;Pressure  ;Pression  
 73;Time;Temps
 74;Sleeve;Chemise
 75;Volume;Volume
 76;Measure;Mesure
-77;;
+77;Calibration step;Nombre de mesures effectuées
 78;Save calibration file;Sauvegarder les données de calibration
 79;;
 80;Idle.;Repos.
