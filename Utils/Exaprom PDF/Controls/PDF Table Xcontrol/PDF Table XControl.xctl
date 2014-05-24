@@ -1,0 +1,35 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<XControl LVVersion="13008000">
+	<Property Name="NI.Lib.HelpPath" Type="Str"></Property>
+	<Property Name="NI.Lib.Icon" Type="Bin">%Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!,"!!!*Q(C=T:5`&lt;B.2%)&gt;`2B3U0A()0E%U*15AO=E"@!'%*D76F3Z"6G3FI+""UV,[#0A+5[&lt;V&amp;3R&amp;1F!OX\Z^^DI*MF-E%G^XXKZ`]W&lt;G?X_SE5J\*&lt;V5=[S.$\&lt;C*V@J&gt;PV^@XNLP/U0_O_'\_=`'0])`S\,!``"_2VL/NC?R&amp;_K&gt;.:W7[70&lt;_J&lt;O:MKX06XLD\_A&lt;`V03[_;?\8@_&lt;Z(X"VH@&lt;7JQNINMR&lt;@^00II&lt;X`F\??TE;P^O6PL[W?^2+.T?\`0`%0_A`(L]X`Q0N-=@XYPAB@^YG$&lt;&lt;(+L(!(,.O4R-^U2-^U2-^U1-^U!-^U!-^U"X&gt;U2X&gt;U2X&gt;U1X&gt;U!X&gt;U!X&gt;NJO,,H3BS]I?*]741EH3*%%S'"1F8=+4]#1]#1]`F@!E0!F0QJ0Q-%1*4]+4]#1]#1^B3HA3HI1HY5FY3&amp;6)MFTI]#1]J&amp;@!%`!%0!&amp;0Q%.*"4Q"1&amp;!M3"QE!5/"-XA*?!+?A)&gt;8"4Q"4]!4]!1]O"8Q"$Q"4]!4]""36C5+48OBQU-;/4Q/D]0D]$A]J*&lt;$Y`!Y0![0QU-Z/4Q/DQ0B&amp;(33AS!HS"HA`("Y("Y?=HA=(I@(Y8&amp;Y=*5&gt;]L)S,5V\I=.D]"A]"I`"9`#11A;0Q70Q'$Q'$WFF]"A]"I`"9`"13A;0Q70Q'#"'5=L,3'9%'I--Q?$B,K@&amp;SCZ&amp;)&lt;&amp;SV4`.\K#K(E$6A[6[9&amp;10AOI'KW[=[I;I,L4K!KIOD/K%63?C#KB;7$7B[E"N[.@9#FNC#WS'4&lt;%*.M+'&lt;?A4$^RM.FKPVVKN6FIOFVIM&amp;JL.:JJ/JZJ-*BK.2BI/B\OPV2OOLAXWPUOX6[_&lt;XT]&lt;\&amp;VTS`.0;V@^^_/#]6P\?D;_H(`[-:B`(Q`GP^LHW]N^0X:S@@&lt;B^0L&lt;_^0ZF`)]P`\Y_2Q&gt;'\40EX:=^VX[(\[.?N(`O_X7[#]EH-&lt;&amp;!!!!!!</Property>
+	<Property Name="NI.Lib.SourceVersion" Type="Int">318799872</Property>
+	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
+	<Property Name="NI.SortType" Type="Int">3</Property>
+	<Property Name="NI.XClass.Flags" Type="Int">0</Property>
+	<Property Name="NI.XItem.DeclaredLeakProof" Type="Bool">false</Property>
+	<Property Name="NI.XItem.Express" Type="Bool">false</Property>
+	<Property Name="NI.XItem.Name" Type="Str">XControl 1</Property>
+	<Property Name="NI.XItem.SupportsFatalErrorOut" Type="Bool">false</Property>
+	<Item Name="PDF Table Data.ctl" Type="Ability VI" URL="../PDF Table Data.ctl">
+		<Property Name="NI.XItem.Name" Type="Str">Data</Property>
+	</Item>
+	<Item Name="PDF Table State.ctl" Type="Ability VI" URL="../PDF Table State.ctl">
+		<Property Name="NI.XItem.Name" Type="Str">State</Property>
+	</Item>
+	<Item Name="PDF Table Facade.vi" Type="Ability VI" URL="../PDF Table Facade.vi">
+		<Property Name="NI.XItem.Name" Type="Str">Facade</Property>
+	</Item>
+	<Item Name="Init .vi" Type="Ability VI" URL="../Init .vi">
+		<Property Name="NI.XItem.Name" Type="Str">Init</Property>
+	</Item>
+	<Item Name="Close PDF Table" Type="Property Folder">
+		<Property Name="NI.LibItem.Prop.Identifier" Type="Str">Close PDF Table</Property>
+		<Property Name="NI.LibItem.Prop.Localized.LongName" Type="Str">Close PDF Table</Property>
+		<Item Name="Close PDF Table Write.vi" Type="Property VI" URL="../VIs/Close PDF Table Write.vi"/>
+	</Item>
+	<Item Name="Initialize" Type="Property Folder">
+		<Property Name="NI.LibItem.Prop.Identifier" Type="Str">Initialize</Property>
+		<Property Name="NI.LibItem.Prop.Localized.LongName" Type="Str">Initialize</Property>
+		<Item Name="Initialize Write.vi" Type="Property VI" URL="../VIs/Initialize Write.vi"/>
+	</Item>
+</XControl>

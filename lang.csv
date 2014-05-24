@@ -1,1 +1,306 @@
-0;hello;bonjour;guten tag;hola
+0;English;Français
+1;Number;Numéro
+2;Sample ID;ID de l'échantillon
+3;Depth (cm);Profondeur (cm)
+4;Dry weight (g);Poids à sec (g)
+5;Grain volume (cm3);Volume de grain (cm3)
+6;Grain density (g/cm3);Densité de grain (g/cm3)
+7;Pore volume (cm3);Volume de pore (cm3)
+8;Porosity (%);Porosité (%)
+9;Sleeve volume (cm3);Volume de l'enveloppe (cm3)
+10;Length (cm);Longueur (cm)
+11;Diameter (cm);Diamètre (cm)
+12;Thickness (cm);Epaisseur (cm)
+13;Temperature (°C);Température (°C)
+14;Comments;Commentaires
+15;;
+16;;
+17;;
+18;;
+19;;
+20;;
+21;;
+22;;
+23;Please wait …;Veuillez patienter …
+24;Presentation;Présentation
+25;Operations;Opérations
+26;Settings;Configuration
+27;Services;Services
+28;Porosimeter;Porosimètre
+29;Exit;Quitter
+30;Calibrate;Etalonner
+31;Measure;Faire une mesure
+32;Purge;Purger
+33;Automatic mode;Mode automatique
+34;Manual mode;Mode manuel
+35;Helium tank;Bonbonne d'Hélium
+36;Reference 1;Référence 1
+37;Reference 2;Référence 2
+38;Pressure Transducer;Capteur de pression
+39;V1;V1
+40;V2;V2
+41;Sample valve;Valve de l'échantillon
+42;Inlet valve;Valve d'entrée
+43;Outlet valve;Valve de sortie
+44;Matrix cup;Echantillon
+45;;
+46;Reference Cell;Cellule de référence
+47;;
+48;;
+49;;
+50;Calibration volumes table;Tableau des volumes de calibrations
+51;Machine name;Nom de la machine
+52;Average absolute deviation;Deviation moyenne
+53;Services access;Accès aux services
+54;Password;Mot de passe
+55;Authenticated;Accès autorisé
+56;Transducer communication;Communication capteur
+57;Valve communication;Communication valves
+58;Port;Port
+59;Baudrate;Vitesse (bauds)
+60;Databits;Bits de données
+61;Paritybit;Parité
+62;Stopbits;Bits de stop
+63;Flux control;Contrôle de flux
+64;Register address;Adresse de registre
+65;Connected device;Modules actifs
+66;PUM-E;PUM-E actif
+67;Pressure Transducer;Capteur de pression actif
+68;Lack of power;Défaut de puissance
+69;Overpressure;Surpression
+70;Loss of pressure signal;Perte du signal de pression
+71;Current pressure;Pression courante
+72;Pressure  ;Pression  
+73;Time;Temps
+74;Sleeve;Chemise
+75;Volume;Volume
+76;Measure;Mesure
+77;Calibration step;Nombre de mesures effectuées
+78;Save calibration file;Sauvegarder les données de calibration
+79;;
+80;Idle.;Repos.
+81;Calibration: idle.;Calibration: repos.
+82;Measure in progress. Do not open the container.;Mesure en cours. N'ouvrez pas le conteneur.
+83;Purge in progress. Please wait for the end to open the container.;Purge en cours. Veuillez attendre la fin avant d'ouvrir le conteneur.
+84;Calibration: measure in progress, do not open the container.;Calibration: mesure en cours, n'ouvrez pas le conteneur.
+85;Measure has been reported;Rapport de la mesure effectué
+86;;
+87;;
+88;;
+89;Captor configuration;Configuration du capteur
+90;Valve configuration;Configuration des valves
+91;Valve mapping;Mappage des valves
+92;Sleeve configuration;Configuration de la chaussette
+93;Pressure offset;Offset de pression
+94;Pressure gain;Gain de pression
+95;Save changes;Sauvegarder
+96;Available languages;Langues disponibles
+97;Measures;Mesures
+98;Measures and fitted curve;Mesure et courbe d'étalonnage
+99;Fitted polynom coefficients;Coefficient du polynome d'extrapolation
+100;Residue;Résidu
+101;;
+102;Calibration file;Fichier de calibration
+103;Load file;Charger le fichier
+104;Available volumes;Volumes disponibles
+105;Total volume;Volume total
+106;Sleeve;Chemise
+107;Start measure;Lancer la mesure
+108;End calibration;Terminer la calibration
+109;Measures results;Résultats
+110;Clear measures table;Effacer le tableau des résultats
+111;Export to HTML;Exporter en HTML
+112;;
+113;;
+114;;
+115;;
+116;;
+117;;
+118;;
+119;;
+120;;
+121;;
+122;;
+123;;
+124;;
+125;;
+126;;
+127;;
+128;;
+129;;
+130;;
+131;;
+132;;
+133;;
+134;;
+135;;
+136;;
+137;;
+138;;
+139;;
+140;;
+141;;
+142;;
+143;;
+144;;
+145;;
+146;;
+147;;
+148;;
+149;;
+150;;
+151;;
+152;;
+153;;
+154;;
+155;;
+156;;
+157;;
+158;;
+159;;
+160;;
+161;;
+162;;
+163;;
+164;;
+165;;
+166;;
+167;;
+168;;
+169;;
+170;;
+171;;
+172;;
+173;;
+174;;
+175;;
+176;;
+177;;
+178;;
+179;;
+180;;
+181;;
+182;;
+183;;
+184;;
+185;;
+186;;
+187;;
+188;;
+189;;
+190;;
+191;;
+192;;
+193;;
+194;;
+195;;
+196;;
+197;;
+198;;
+199;;
+200;;
+201;;
+202;;
+203;;
+204;;
+205;;
+206;;
+207;;
+208;;
+209;;
+210;;
+211;;
+212;;
+213;;
+214;;
+215;;
+216;;
+217;;
+218;;
+219;;
+220;;
+221;;
+222;;
+223;;
+224;;
+225;;
+226;;
+227;;
+228;;
+229;;
+230;;
+231;;
+232;;
+233;;
+234;;
+235;;
+236;;
+237;;
+238;;
+239;;
+240;;
+241;;
+242;;
+243;;
+244;;
+245;;
+246;;
+247;;
+248;;
+249;;
+250;;
+251;;
+252;;
+253;;
+254;;
+255;;
+256;;
+257;;
+258;;
+259;;
+260;;
+261;;
+262;;
+263;;
+264;;
+265;;
+266;;
+267;;
+268;;
+269;;
+270;;
+271;;
+272;;
+273;;
+274;;
+275;;
+276;;
+277;;
+278;;
+279;;
+280;;
+281;;
+282;;
+283;;
+284;;
+285;;
+286;;
+287;;
+288;;
+289;;
+290;;
+291;;
+292;;
+293;;
+294;;
+295;;
+296;;
+297;;
+298;;
+299;;
+300;;
+301;;
+302;;
+303;;
+304;;
+305;;
