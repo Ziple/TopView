@@ -77,7 +77,7 @@
 76;Measure;Mesure
 77;Calibration step;Nombre de mesures effectuées
 78;Save calibration file;Sauvegarder les données de calibration
-79;;
+79;Restart calibration;Recommencer la calibration
 80;Idle.;Repos.
 81;Calibration: idle.;Calibration: repos.
 82;Measure in progress. Do not open the container.;Mesure en cours. N'ouvrez pas le conteneur.
@@ -110,23 +110,23 @@
 109;Measures results;Résultats
 110;Clear measures table;Effacer le tableau des résultats
 111;Export to HTML;Exporter en HTML
-112;;
-113;;
-114;;
-115;;
-116;;
+112;Export data;Exporter  
+113;Save data;Sauvegarder
+114;Load data;Charger
+115;Clear graph;Vider le graphe
+116;Export to PDF;Exporter en PDF
 117;;
-118;;
-119;;
-120;;
+118;Minimal wait time (ms);Temps minimal d'attente (ms)
+119;Variance trigger;Variance minimale
+120;Sample masks;Nombre de points
 121;;
-122;;
-123;;
-124;;
-125;;
-126;;
-127;;
-128;;
+122;Company;Entreprise
+123;Location;Lieu
+124;Country;Pays
+125;Lab;Laboratoire
+126;Operator;Opérateur
+127;Field;Champs
+128;Well;Puits
 129;;
 130;;
 131;;
