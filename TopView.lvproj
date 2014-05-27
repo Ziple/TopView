@@ -145,7 +145,7 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Top Porosimeter/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{615BD39B-3E81-4563-B07D-959DB9016A81}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{EC5AB4C5-8769-455E-96C3-038688F2FAC3}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/TopView/Interface/Interface.vi</Property>
