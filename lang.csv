@@ -7,7 +7,7 @@
 6;Grain density (g/cm3);Densité de grain (g/cm3)
 7;Pore volume (cm3);Volume de pore (cm3)
 8;Porosity (%);Porosité (%)
-9;Sleeve volume (cm3);Volume de l'enveloppe (cm3)
+9;Sleeve volume (cm3);Volume de la chemise (cm3)
 10;Length (cm);Longueur (cm)
 11;Diameter (cm);Diamètre (cm)
 12;Thickness (cm);Epaisseur (cm)
@@ -72,7 +72,7 @@
 71;Current pressure;Pression courante
 72;Pressure  ;Pression  
 73;Time;Temps
-74;Sleeve;Chemise
+74;Disk set;Jeu de disques
 75;Volume;Volume
 76;Measure;Mesure
 77;Calibration step;Nombre de mesures effectuées
@@ -85,19 +85,19 @@
 84;Calibration: measure in progress, do not open the container.;Calibration: mesure en cours, n'ouvrez pas le conteneur.
 85;Measure has been reported;Rapport de la mesure effectué
 86;;
-87;;
-88;;
+87;Purge done.;Purge finie.
+88;Purging…;Purge en cours…
 89;Captor configuration;Configuration du capteur
 90;Valve configuration;Configuration des valves
 91;Valve mapping;Mappage des valves
-92;Sleeve configuration;Configuration de la chaussette
+92;Sleeve configuration;Configuration de la chemise
 93;Pressure offset;Offset de pression
 94;Pressure gain;Gain de pression
 95;Save changes;Sauvegarder
 96;Available languages;Langues disponibles
 97;Measures;Mesures
 98;Measures and fitted curve;Mesure et courbe d'étalonnage
-99;Fitted polynom coefficients;Coefficient du polynome d'extrapolation
+99;Fitted polynom coefficients;Coefficient du polynome d'interpolation
 100;Residue;Résidu
 101;;
 102;Calibration file;Fichier de calibration
@@ -118,7 +118,7 @@
 117;;
 118;Minimal wait time (ms);Temps minimal d'attente (ms)
 119;Variance trigger;Variance minimale
-120;Sample masks;Nombre de points
+120;Use point n°;Prise en compte point n°
 121;;
 122;Company;Entreprise
 123;Location;Lieu
@@ -128,11 +128,11 @@
 127;Field;Champs
 128;Well;Puits
 129;;
-130;;
-131;;
+130;Stability achieved.;Stabilité atteinte.
+131;Stability NOT achieved;Stabilité NON atteinte
 132;;
-133;;
-134;;
+133;Measuring…;Mesure en cours…
+134;Correlation;Correlation
 135;;
 136;;
 137;;
