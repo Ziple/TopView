@@ -45,9 +45,9 @@
 44;Matrix cup;Echantillon
 45;;
 46;Reference Cell;Cellule de référence
-47;;
-48;;
-49;;
+47;Keep point;Garder le point
+48;P1/P2 ratio;Rapport P1/P2
+49;Continue;Continuer
 50;Calibration volumes table;Tableau des volumes de calibrations
 51;Machine name;Nom de la machine
 52;Average absolute deviation;Deviation moyenne
@@ -115,11 +115,11 @@
 114;Load data;Charger
 115;Clear graph;Vider le graphe
 116;Export to PDF;Exporter en PDF
-117;;
+117;Maximal wait time (ms);Temps maximal d'attente (ms)
 118;Minimal wait time (ms);Temps minimal d'attente (ms)
 119;Variance trigger;Variance minimale
 120;Use point n°;Prise en compte point n°
-121;;
+121;Delete measure;Supprimer la mesure
 122;Company;Entreprise
 123;Location;Lieu
 124;Country;Pays
@@ -134,8 +134,8 @@
 133;Measuring…;Mesure en cours…
 134;Correlation;Correlation
 135;Grain measure;Faire une mesure de grain
-136;;
-137;;
+136;Grain measures;Mesures de grain
+137;Pore measures;Mesures de pore
 138;;
 139;;
 140;;
